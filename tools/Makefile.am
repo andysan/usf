@@ -1,6 +1,8 @@
 if HAVE_ARGP
-PROG_NEED_ARGP=usfdump usf2usf
+PROG_NEED_ARGP=usfdump usf2usf trcstats
 endif
+
+CFLAGS = -std=gnu99
 
 bin_PROGRAMS = usfsort usfcat usfstats usf2trace \
                usfresampler usfdiff usfsplit usfgentrace \
@@ -23,3 +25,4 @@ usfresampler_SOURCES = usfresampler.c
 usfdiff_SOURCES = usfdiff.c
 usfsplit_SOURCES = usfsplit.c
 usfgentrace_SOURCES = usfgentrace.c
+trcstats_SOURCES = trcstats.c
